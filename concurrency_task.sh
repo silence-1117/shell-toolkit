@@ -5,13 +5,11 @@ THREAD_NUM=10
 ##File marking time
 START_TIME=`date +%Y%m%d%H%M%S`
 
-
 ##Normal, keep the same
 QUE_FILE_NAME="/tmp/.$$_fd"
 
 ##Normal, keep the same
 RESULT_FILE="/tmp/result$START_TIME"
-
 
 ##Calculate task processing time
 START_TIME_SEC=`date +%s`
@@ -84,7 +82,7 @@ function concurrency_task()
     do
         read -u8
         {
-        	##exec task
+            ##exec task
             $1 $i
 
             ## task status 
